@@ -30,6 +30,10 @@
   height: 100%;
 }
 
+.hero tmp {
+    color: red;
+}
+
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
