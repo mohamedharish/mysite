@@ -123,7 +123,7 @@ export default async function decorate(block) {
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
-    if (section) section.classList.add(`nav-${c}-container`); //MH
+    if (section) section.classList.add(`nav-${c}-${i}-container`); //MH
   });
 
   const navBrand = nav.querySelector('.nav-brand');
