@@ -5,7 +5,15 @@
  */
 
 export default function decorate(block) {
-  [...block.children].forEach((row) => {
+  [...block.children].forEach((row, index) => {
+    var customClass = " list-odd";
+    if(index % 2 === 0) {
+      customClass = " list-even";
+
+    } else {
+      //Do nothing
+
+    }
     // decorate accordion item label
     const label = row.children[0];
     const summary = document.createElement('summary');
@@ -16,7 +24,7 @@ export default function decorate(block) {
     body.className = 'accordion-item-body';
     // decorate accordion item
     const details = document.createElement('details');
-    details.className = 'accordion-item';
+    details.className = 'accordion-item'.append(customClass);
     details.append(summary, body);
     row.replaceWith(details);
   });
