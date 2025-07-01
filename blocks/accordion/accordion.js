@@ -6,9 +6,9 @@
 
 export default function decorate(block) {
   [...block.children].forEach((row, index) => {
-    var customClass = " list-odd";
+    var customClass = " list-even";
     if(index % 2 === 0) {
-      customClass = " list-even";
+      customClass = " list-odd";
 
     } else {
       //Do nothing
